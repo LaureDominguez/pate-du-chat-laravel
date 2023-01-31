@@ -16,7 +16,7 @@
                         {{ __('Accueil') }}
                     </x-nav-link>
                     <x-nav-link :href="('/shop')" :active="request()->routeIs('shop')">
-                        {{ __('Shop') }}
+                        {{ __('Boutique') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('News') }}

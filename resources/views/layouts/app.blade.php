@@ -28,7 +28,11 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                @if (isset($index))
+                    {{ $index }}
+                @elseif (isset($shop))
+                    {{ $shop }}
+                @endif
             </main>
         </div>
     </body>

@@ -9,16 +9,14 @@ class ShopController extends Controller
 {
     public function index()
     {
-        return view('shop', [
+        return view('shop.shop', [
             'articles' => Shop::all()
         ]);
     }
 
     public function show(Shop $article)
-    {
-        // $shop = Shop::findOrFail($id);
-        
-        return view('article', [
+    {        
+        return view('shop.article', [
             'article' => $article
         ]);
     }
