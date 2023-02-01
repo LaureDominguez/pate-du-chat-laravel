@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index'])->name('shop.shop');
-Route::get('/shop/{article}', [\App\Http\Controllers\ShopController::class, 'show'])->name('shop.show');
+Route::get('/{article}', [\App\Http\Controllers\ShopController::class, 'show'])->name('shop.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

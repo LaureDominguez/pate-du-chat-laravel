@@ -5,20 +5,20 @@
         </h2>
     </x-slot>
 
-    <x-slot name="shop">
+    <x-slot name="shop" class="shop-view">
         <h1>Nos articles</h1>
-        <ul>
+        <div class="container-shop-view">
             @foreach ($articles as $article)
-                <article>
+                <article class="acticle-view">
                     <img src="" alt="">
                     <div>
                         <h5>{{$article->title}}</h5>
-                        <p>{{$article->content}}</p>
-                        <a href="{{$article->id}}" class="btn btn-primary">Go somewhere</a>
+                        <p class="short">{{$article->content}}</p>
+                        <a href="{{$article->id}}" class="btn">bouton</a>
                     </div>
                 </article>
             @endforeach
-        </ul>
+            </div>
     </x-slot>
 
 </x-app-layout>
