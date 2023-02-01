@@ -9,7 +9,14 @@
         <h1>Nos articles</h1>
         <ul>
             @foreach ($articles as $article)
-                <li><a href="{{$article->id}}">{{$article->title}}</a></li>
+                <article>
+                    <img src="" alt="">
+                    <div>
+                        <h5>{{$article->title}}</h5>
+                        <p>{{$article->content}}</p>
+                        <a href="{{$article->id}}" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </article>
             @endforeach
         </ul>
     </x-slot>
