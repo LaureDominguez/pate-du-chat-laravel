@@ -18,8 +18,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/shop', [\App\Http\Controllers\ShopController::class, 'index'])->name('shop.shop');
-Route::get('/{article}', [\App\Http\Controllers\ShopController::class, 'show'])->name('shop.show');
+Route::get('/shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
+Route::get('/{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.product');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
