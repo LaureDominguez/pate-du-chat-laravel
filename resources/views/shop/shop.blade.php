@@ -19,6 +19,7 @@
                 </article>
             @endforeach
         </ul>
+        <button class="btn">ajouter un produit</button>
     </x-slot>
 
 </x-app-layout>
