@@ -18,8 +18,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
-Route::get('/{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.product');
+Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
+Route::get('{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.product');
+Route::get('create', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.create');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

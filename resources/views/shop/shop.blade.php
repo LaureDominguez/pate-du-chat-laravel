@@ -14,12 +14,12 @@
                     <div>
                         <h5>{{$product->title}}</h5>
                         <p class="short">{{$product->content}}</p>
-                        <a href="{{$product->id}}" class="btn">bouton</a>
+                        <a href="{{$product->id}}" class="btn">voir plus</a>
                     </div>
                 </article>
             @endforeach
         </div>
-        <button class="btn">Ajouter un produit</button>
+        <button class="btn" action="{{ route('shop.create') }}">Ajouter un produit</button>
     </x-slot>
 
 </x-app-layout>
