@@ -6,8 +6,8 @@
     </x-slot>
 
     <x-slot name="shop">
-        <h1>{{$article->title}}</h1>
-        <p>{{$article->content}}</p>
+        <h1>{{$product->title}}</h1>
+        <p>{{$product->content}}</p>
     </x-slot>
 
 </x-app-layout>

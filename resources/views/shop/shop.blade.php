@@ -8,13 +8,13 @@
     <x-slot name="shop">
         <h1>Nos articles</h1>
         <ul>
-            @foreach ($articles as $article)
+            @foreach ($products as $product)
                 <article>
                     <img src="" alt="">
                     <div>
-                        <h5>{{$article->title}}</h5>
-                        <p>{{$article->content}}</p>
-                        <a href="{{$article->id}}" class="btn btn-primary">Go somewhere</a>
+                        <h5>{{$product->title}}</h5>
+                        <p>{{$product->content}}</p>
+                        <a href="{{$product->id}}" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </article>
             @endforeach
