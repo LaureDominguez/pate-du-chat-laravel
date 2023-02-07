@@ -14,12 +14,12 @@
                     <div>
                         <h5>{{$product->title}}</h5>
                         <p>{{$product->content}}</p>
-                        <a href="{{$product->id}}" class="btn btn-primary">Go somewhere</a>
+                        <a href="{{ $product->id }}" class="btn">Go somewhere</a>
                     </div>
                 </article>
             @endforeach
         </ul>
-        <button class="btn">ajouter un produit</button>
+        <a href="{{ route('shop.new') }}" class="btn" >ajouter un produit</a>
     </x-slot>
 
 </x-app-layout>

@@ -3,16 +3,20 @@
 @tailwind utilities;
 
 /******************* general *******************/
+h1{
+    color: red;
+}
 
 /* bouton */
 .btn{
     padding: 0.2rem;
+    margin: 0.5rem;
     border: solid #000 1px ;
     border-radius: 5px;
     transition: all, 0.2s ease-in;
 }
 
-.btn:hover{
+.btn:hover, .btn:active{
     color: #fff;
     background-color: #000;
 }

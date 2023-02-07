@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
 Route::get('shop/{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.show');
-Route::match(['get', 'post'], 'shop/new', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.modal');
+Route::match(['get', 'post'], 'shop/new', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.new');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
