@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
+use function GuzzleHttp\Promise\all;
+
 class ProductController extends Controller
 {
     /**
@@ -24,9 +26,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Product $product)
     {
-        return view('shop.modal');
+        return view('shop.new', [
+            'product' => $product
+        ]);
     }
 
     /**
@@ -37,7 +41,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product;
+        $product->title = $request->title;
+        $product->content = $request->content;
+        $product->price = $request->price;
+        $product->save();
+        return redirect('shop')->with('status', 'Produit ajouté !');
     }
 
     /**
@@ -48,7 +57,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        return view('shop.product', [
+        return view('shop.view', [
             'product' => $product
         ]);
     }

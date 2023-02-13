@@ -7,19 +7,24 @@
 
     <x-slot name="shop">
         <h1>Nos articles</h1>
-        <ul>
+        @if (session('status'))
+            <div>
+                {{session('status')}}
+            </div>
+        @endif
+        <div>
             @foreach ($products as $product)
                 <article>
                     <img src="" alt="">
                     <div>
                         <h5>{{$product->title}}</h5>
                         <p>{{$product->content}}</p>
-                        <a href="{{ $product->id }}" class="btn">Go somewhere</a>
+                        <a href="{{route('shopping.show', $product->id)}}" class="btn">voir plus</a>
                     </div>
                 </article>
             @endforeach
-        </ul>
-        <a href="{{ route('shop.new') }}" class="btn" >ajouter un produit</a>
+            </div>
+        <a href="{{ route('shopping.form') }}" class="btn" >ajouter un produit</a>
     </x-slot>
 
 </x-app-layout>

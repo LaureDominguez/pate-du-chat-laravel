@@ -18,9 +18,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
-Route::get('shop/{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.show');
-Route::match(['get', 'post'], 'shop/new', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.new');
+Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shopping.index');
+Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
+Route::post('store-form', [\App\Http\Controllers\ProductController::class, 'store'])->name('shopping.new');
+Route::get('detail-{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shopping.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
