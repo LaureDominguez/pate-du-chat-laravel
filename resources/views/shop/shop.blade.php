@@ -17,6 +17,7 @@
                     <div>
                         <h5>{{$product->title}}</h5>
                         <p>{{$product->content}}</p>
+                        <p>{{$product->price}}€</p>
                         <a href="{{route('shopping.show', $product->id)}}" class="btn">voir plus</a>
                     </div>
                 </article>
