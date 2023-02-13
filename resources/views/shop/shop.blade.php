@@ -1,20 +1,18 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Boutique') }}
-        </h2>
+        <h2>{{ __('Boutique') }}</h2>
     </x-slot>
 
     <x-slot name="shop">
         <h1>Nos articles</h1>
         @if (session('status'))
-            <div>
+            <div class="alert alert-success">
                 {{session('status')}}
             </div>
         @endif
-        <div>
+        <div class="container-shop-view">
             @foreach ($products as $product)
-                <article>
+                <article class="acticle-view">
                     <img src="" alt="">
                     <div>
                         <h5>{{$product->title}}</h5>
