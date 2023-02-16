@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->double('price');
+            $table->string('image')->nullable();
         });
     }
 

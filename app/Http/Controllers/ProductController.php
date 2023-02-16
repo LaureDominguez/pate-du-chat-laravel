@@ -6,6 +6,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 use function GuzzleHttp\Promise\all;
+use function PHPUnit\Framework\isTrue;
 
 class ProductController extends Controller
 {
@@ -41,10 +42,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         $product = new Product;
         $product->title = $request->title;
         $product->content = $request->content;
         $product->price = $request->price;
+
+        // if ($request->image) {
+        //     dd($request);
+        //     $request->validate([
+        //         'image' => 'mimes:png,jpg,jpeg'
+        //     ]);
+        //     $request->image->store('product', 'app', 'public');
+        //     $product->image = $request->file->hashName();
+        // }
         $product->save();
         return redirect('shop')->with('status', 'Produit ajouté !');
     }
