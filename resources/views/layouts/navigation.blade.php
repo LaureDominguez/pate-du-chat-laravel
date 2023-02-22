@@ -10,13 +10,13 @@
 
         <!-- Navigation Links -->
         <div>
-            <x-nav-link :href="('/')" :active="request()->routeIs('/')">
+            <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                 {{ __('Accueil') }}
             </x-nav-link>
-            <x-nav-link :href="('/shop')" :active="request()->routeIs('shopping.index')">
+            <x-nav-link :href="route('shop')" :active="request()->routeIs('shop')">
                 {{ __('Boutique') }}
             </x-nav-link>
-            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+            <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')">
                 {{ __('News') }}
             </x-nav-link>
             <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">

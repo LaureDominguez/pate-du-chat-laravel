@@ -36,6 +36,9 @@
                 @isset($shop)
                     {{$shop}}
                 @endisset
+                @isset($gallery)
+                    {{$gallery}}
+                @endisset
 
                 {{ $slot }}
             </main>

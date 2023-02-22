@@ -16,13 +16,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
-Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shopping.index');
+// Shop
+Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop');
 Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
 Route::post('store-form', [\App\Http\Controllers\ProductController::class, 'store'])->name('shopping.new');
-Route::resource('image', '\App\Http\Controllers\ProductController');
+// Route::resource('image', '\App\Http\Controllers\ProductController');
 Route::get('detail-{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shopping.show');
+
+// Gallery
+Route::get('image-gallery', [\App\Http\Controllers\ImageGalleryController::class, 'index'])->name('gallery');
+Route::post('image-gallery', [\App\Http\Controllers\ImageGalleryController:: class, 'upload']);
+Route::delete('image-gallery/{id}', [\App\Http\Controllers\ImageGalleryController:: class, 'destroy']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
