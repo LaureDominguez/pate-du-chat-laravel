@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shopping.index');

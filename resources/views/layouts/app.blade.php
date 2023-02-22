@@ -8,11 +8,11 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        {{-- <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap"> --}}
+        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
         <!-- Scripts -->
-        <script src="https://kit.fontawesome.com/267127ee95.js" crossorigin="anonymous"></script>
+        {{-- <script src="https://kit.fontawesome.com/267127ee95.js" crossorigin="anonymous"></script> --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     
@@ -29,11 +29,15 @@
 
             <!-- Page Content -->
             <main>
-                @if (isset($index))
-                    {{ $index }}
-                @elseif (isset($shop))
-                    {{ $shop }}
-                @endif
+
+                @isset($home)
+                    {{$home}}
+                @endisset
+                @isset($shop)
+                    {{$shop}}
+                @endisset
+
+                {{ $slot }}
             </main>
         </div>
     </body>
