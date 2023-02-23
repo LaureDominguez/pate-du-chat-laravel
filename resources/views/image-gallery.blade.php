@@ -1,10 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2>{{ __('Gallery') }}</h2>
+        <h1>{{ __('Gallerie') }}</h1>
     </x-slot>
 
-    <x-slot name="gallery">
-        <h2>Gallerie</h2>
+    <x-slot name="main">
         <form action="{{url('image-gallery')}}" method="POST" enctype="multipart/form-data">
             {!!csrf_field()!!}
 

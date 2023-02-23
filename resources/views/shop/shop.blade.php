@@ -3,7 +3,7 @@
         <h2>{{ __('Boutique') }}</h2>
     </x-slot>
 
-    <x-slot name="shop">
+    <x-slot name="main">
         <h1>Nos articles</h1>
         @if (session('status'))
             <div class="alert alert-success">

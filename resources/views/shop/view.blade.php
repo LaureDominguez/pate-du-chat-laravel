@@ -3,7 +3,7 @@
         <h2>{{ __('Détail') }}</h2>
     </x-slot>
 
-    <x-slot name="shop">
+    <x-slot name="main">
         <h1>Titre : {{$product->title}}</h1>
         <p>description : {{$product->content}}</p>
         <p>prix : {{$product->price}}€</p>

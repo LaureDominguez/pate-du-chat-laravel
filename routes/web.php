@@ -14,15 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', function () {return view('home');})->name('home');
+// Route::get('news-carousel', [\App\Http\Controllers\Controller::class, 'newsCarousel']);
 
 // Shop
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop');
 Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
 Route::post('store-form', [\App\Http\Controllers\ProductController::class, 'store'])->name('shopping.new');
-// Route::resource('image', '\App\Http\Controllers\ProductController');
 Route::get('detail-{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shopping.show');
 
 // Gallery

@@ -3,7 +3,7 @@
         <h2>{{ __('Nouveau produit') }}</h2>
     </x-slot>
 
-    <x-slot name="shop">
+    <x-slot name="main">
         @if (session('status'))
             <div>
                 {{session('status')}}

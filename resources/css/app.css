@@ -59,6 +59,17 @@ form{
     -webkit-text-fill-color: transparent;
 }
 
+/******************* Carousel *******************/
+.carousel-inner{
+    display: flex;
+}
+.carousel-item{
+    width: 10rem;
+    height: 15rem;
+    overflow: hidden;
+    border: solid 1px ;
+}
+
 /******************* nav *******************/
 .primary-nav{
     display: flex;

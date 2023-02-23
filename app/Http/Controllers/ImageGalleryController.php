@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\ImageGallery;
 use Illuminate\Http\Request;
 
+use function PHPUnit\Framework\returnSelf;
+
 class ImageGalleryController extends Controller
 {
     public function index()
@@ -12,6 +14,12 @@ class ImageGalleryController extends Controller
         $images = ImageGallery::get();
         return view('image-gallery', compact('images'));
     }
+
+    // public function carousel()
+    // {
+    //     $images = ImageGallery::get();
+    //     return $images;
+    // }
 
     public function upload(Request $request)
     {

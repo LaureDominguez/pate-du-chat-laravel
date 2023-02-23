@@ -29,16 +29,21 @@
 
             <!-- Page Content -->
             <main>
-
-                @isset($home)
+                {{-- @isset($home)
                     {{$home}}
                 @endisset
+
                 @isset($shop)
                     {{$shop}}
                 @endisset
+
                 @isset($gallery)
                     {{$gallery}}
-                @endisset
+                @endisset --}}
+
+                @if (isset($main))
+                    {{ $main }}
+                @endif
 
                 {{ $slot }}
             </main>
