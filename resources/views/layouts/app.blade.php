@@ -12,8 +12,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
         <!-- Scripts -->
-        {{-- <script src="https://kit.fontawesome.com/267127ee95.js" crossorigin="anonymous"></script> --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @if (isset($head))
+            {{ $head }}
+        @endif
     </head>
     
     <body>
@@ -29,22 +31,9 @@
 
             <!-- Page Content -->
             <main>
-                {{-- @isset($home)
-                    {{$home}}
-                @endisset
-
-                @isset($shop)
-                    {{$shop}}
-                @endisset
-
-                @isset($gallery)
-                    {{$gallery}}
-                @endisset --}}
-
                 @if (isset($main))
                     {{ $main }}
                 @endif
-
                 {{ $slot }}
             </main>
         </div>

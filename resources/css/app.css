@@ -22,6 +22,17 @@ h1, h2, h3, h4, h5 {
     text-transform: capitalize;
 }
 
+a, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 form{
     display: flex;
     flex-wrap: wrap;
@@ -60,14 +71,65 @@ form{
 }
 
 /******************* Carousel *******************/
+.carousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .carousel-inner{
     display: flex;
+    order: 2;
 }
+
 .carousel-item{
-    width: 10rem;
+    width: 15rem;
     height: 15rem;
     overflow: hidden;
     border: solid 1px ;
+    position: relative;
+}
+
+.carousel-item img{
+    filter: blur(1px);
+}
+
+.carousel-caption{
+    position: absolute;
+    bottom: 0;
+    height: 6rem;
+    text-align: justify;
+    padding: 3rem 1rem 0 1rem;
+    background: linear-gradient(
+        180deg,
+        transparent 10%,
+        #fff 90%
+    );
+}
+
+.carousel-active{
+    width: 20rem;
+}
+
+.carousel-active img{
+    
+    filter: blur(0);
+}
+
+.carousel-control-prev{
+    display: flex;
+    align-items: center;
+    order: 1;
+    border: solid 1px salmon;
+    height: 15rem;
+}
+
+.carousel-control-next{
+    display: flex;
+    align-items: center;
+    order: 3;
+    border: solid 1px salmon;
+    height: 15rem;
 }
 
 /******************* nav *******************/

@@ -1,4 +1,8 @@
 <x-app-layout>
+    <x-slot name="head">
+        @vite(['resources/js/main.js'])
+    </x-slot>
+
     <x-slot name="header">
         <h1>{{ __('Les Pâtes du chat') }}</h1>
     </x-slot>
@@ -6,27 +10,29 @@
     <x-slot name="main">
         <section>
             <h2>News</h2>
-            <div class="carousel">
+            <div id="carousel" class="carousel">
                 <div class="carousel-inner">
-                    <figure class="carousel-item">
-                        <img alt="" src="/images/1677078242.png" />
-                        <figcaption class="short">
+                    <figure id="slide-0" class="carousel-item">
+                        <img alt="" src="/images/1677165410.png" />
+                        <figcaption class="carousel-caption">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae deleniti praesentium velit ab quasi similique officia facere reprehenderit corrupti hic beatae necessitatibus obcaecati, officiis ducimus rem a. Sint, quo!
                         </figcaption>
                     </figure>
-                    <figure class="carousel-item carousel-active">
-                        <img alt="" src="/images/1677078242.png" />
-                        <figcaption class="short">
+                    <figure id="slide-1" class="carousel-item carousel-active">
+                        <img alt="" src="/images/1677165410.png" />
+                        <figcaption class="carousel-caption">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae deleniti praesentium velit ab quasi similique officia facere reprehenderit corrupti hic beatae necessitatibus obcaecati, officiis ducimus rem a. Sint, quo!
                         </figcaption>
                     </figure>
-                    <figure class="carousel-item">
-                        <img alt="" src="/images/1677078242.png" />
-                        <figcaption class="short">
+                    <figure id="slide-2" class="carousel-item">
+                        <img alt="" src="/images/1677165410.png" />
+                        <figcaption class="carousel-caption">
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto recusandae deleniti praesentium velit ab quasi similique officia facere reprehenderit corrupti hic beatae necessitatibus obcaecati, officiis ducimus rem a. Sint, quo!
                         </figcaption>
                     </figure>
                 </div>
+                <a href="#carousel" class="carousel-control-prev" role="button">back</a>
+                <a href="#carousel" class="carousel-control-next" role="button">next</a>
             </div>
         </section>
 
