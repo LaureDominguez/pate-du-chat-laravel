@@ -11,42 +11,37 @@
         <section>
             <h2>News</h2>
 
-            <div id="album-rotator">
-                <div id="album-rotator-holder">
+            <div id="album-rotator" class="album-rotator">
+                <div id="album-rotator-holder" class="album-rotator-holder">
                     <a target="_top" class="album-item" href="">
-                    <span class="album-details">
-                        <span class="title">Click to</span>
-                        <span class="subtitle">Follow</span>
-                        <span class="subtext">On Twitter</span>
-                    </span>
+                        <img src="/images/1677165410.png" alt="">
+                        <p class="album-details">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus ipsum dolores sint, eveniet corrupti et. Aut eligendi expedita quae exercitationem nemo dignissimos vero aperiam quasi? Suscipit commodi enim deserunt!
+                        </p>
                     </a>
                     <a target="_top" class="album-item" href="https://fjolt.com/article/apple-cards-webl-gl-javascript">
-                    <span class="album-details">
-                        <span class="title">Read the</span>
-                        <span class="subtitle">Tutorial</span>
-                        <span class="subtext">View tutorial for this effect</span>
-                    </span>
+                        <img src="/images/1677165410.png" alt="">
+                        <p class="album-details short">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus ipsum dolores sint, eveniet corrupti et. Aut eligendi expedita quae exercitationem nemo dignissimos vero aperiam quasi? Suscipit commodi enim deserunt!
+                        </p>
                     </a>
                     <a target="_top" class="album-item" href="">
-                    <span class="album-details">
-                        <span class="title">Finally</span>
-                        <span class="subtitle">We Go</span>
-                        <span class="subtext">Some text to describe this item</span>
-                    </span>
+                        <img src="/images/1677165410.png" alt="">
+                        <p class="album-details">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus ipsum dolores sint, eveniet corrupti et. Aut eligendi expedita quae exercitationem nemo dignissimos vero aperiam quasi? Suscipit commodi enim deserunt!
+                        </p>
                     </a>
                     <a target="_top" class="album-item" href="">
-                    <span class="album-details">
-                        <span class="title">And</span>
-                        <span class="subtitle">One More</span>
-                        <span class="subtext">Some text to describe this item</span>
-                    </span>
+                        <img src="/images/1677165410.png" alt="">
+                        <p class="album-details">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus ipsum dolores sint, eveniet corrupti et. Aut eligendi expedita quae exercitationem nemo dignissimos vero aperiam quasi? Suscipit commodi enim deserunt!
+                        </p>
                     </a>
                     <a class="album-item" href="">
-                    <span class="album-details">
-                        <span class="title">And</span>
-                        <span class="subtitle">Finally..</span>
-                        <span class="subtext">Some text to describe this item</span>
-                    </span>
+                        <img src="/images/1677165410.png" alt="">
+                        <p class="album-details">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti necessitatibus ipsum dolores sint, eveniet corrupti et. Aut eligendi expedita quae exercitationem nemo dignissimos vero aperiam quasi? Suscipit commodi enim deserunt!
+                        </p>
                     </a>
                 </div>
             </div>
