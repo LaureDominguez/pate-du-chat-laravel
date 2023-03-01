@@ -8,6 +8,15 @@
     </x-slot>
 
     <x-slot name="main">
+        <section class="home">
+            <figure>
+                <img src="/images/logo.png" alt="logo" class="logo">
+                <figcaption>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo ullam! Accusamus necessitatibus enim odit laudantium esse iste fugit, nemo vel accusantium quod numquam voluptates voluptate voluptas, doloribus, excepturi reprehenderit.
+                </figcaption>
+            </figure>
+        </section>
+            
         <section>
             <h2>News</h2>
 

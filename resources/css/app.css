@@ -194,9 +194,27 @@ section{
 }
 
 /******************* nav *******************/
+
 .primary-nav{
     display: flex;
     align-items: center;
+}
+
+/******************* home *******************/
+.home figure{
+    display: flex;
+    align-items: center;
+}
+
+.home img{
+    height: 20rem;
+    width: 20rem;
+    margin: 1rem;
+}
+
+.home figcaption{
+    padding: 1rem;
+    text-align: justify;
 }
 
 /******************* shop *******************/
