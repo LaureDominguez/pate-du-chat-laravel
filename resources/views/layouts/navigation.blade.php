@@ -2,11 +2,11 @@
     <!-- Primary Navigation Menu -->
     <div class="primary-nav">
         <!-- Logo -->
-        <div>
+        {{-- <div>
             <a href="{{ '/' }}">
-                <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                <img src="/images/logo.png" alt="logo" class="logo">
             </a>
-        </div>
+        </div> --}}
 
         <!-- Navigation Links -->
         <div>
