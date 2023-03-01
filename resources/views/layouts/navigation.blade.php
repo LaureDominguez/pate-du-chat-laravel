@@ -92,6 +92,21 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                {{ __('Accueil') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('shop')" :active="request()->routeIs('shop')">
+                {{ __('Boutique') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')">
+                {{ __('News') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                {{ __('Recettes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                {{ __('Contact') }}
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
@@ -118,7 +133,7 @@
                                 <x-responsive-nav-link :href="route('logout')"
                                         onclick="event.preventDefault();
                                                     this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Déconnexion') }}
                                 </x-responsive-nav-link>
                             </form>
                         </div>
@@ -130,7 +145,7 @@
                             <x-responsive-nav-link :href="route('login')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Log In') }}
+                                {{ __('Connexion') }}
                             </x-responsive-nav-link>
                         </form>
 
@@ -141,7 +156,7 @@
                             <x-responsive-nav-link :href="route('register')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Register') }}
+                                {{ __('Nouveau compte') }}
                             </x-responsive-nav-link>
                         </form>
                     @endif

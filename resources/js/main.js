@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", function(e) {
     let selectedItem;
     let currentDelta = 0;
 
-    document.querySelectorAll(config.carouselId).forEach(function(item) { 
+    document.querySelectorAll(config.carouselId).forEach(function (item) { 
+        // let ratio = individualItem.length
         item.style.width = `${config.carouselWidth}px`;
     });
     
