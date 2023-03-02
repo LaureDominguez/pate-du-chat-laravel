@@ -14,13 +14,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', function () {return view('home');})->name('home');
+// Route::get('news-carousel', [\App\Http\Controllers\Controller::class, 'newsCarousel']);
 
+<<<<<<< HEAD
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
 Route::get('{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.product');
 Route::get('create', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.create');
+=======
+// Shop
+Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop');
+Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
+Route::post('store-form', [\App\Http\Controllers\ProductController::class, 'store'])->name('shopping.new');
+Route::get('detail-{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shopping.show');
+
+// Gallery
+Route::get('image-gallery', [\App\Http\Controllers\ImageGalleryController::class, 'index'])->name('gallery');
+Route::post('image-gallery', [\App\Http\Controllers\ImageGalleryController:: class, 'upload']);
+Route::delete('image-gallery/{id}', [\App\Http\Controllers\ImageGalleryController:: class, 'destroy']);
+>>>>>>> nav
 
 Route::get('/dashboard', function () {
     return view('dashboard');

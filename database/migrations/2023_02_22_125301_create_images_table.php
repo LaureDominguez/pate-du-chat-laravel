@@ -13,19 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('image_gallery', function (Blueprint $table) {
             $table->id();
-<<<<<<<< HEAD:database/migrations/2023_02_03_135835_create_products_table.php
-            $table->timestamps();
             $table->string('title');
-            $table->text('content');
-            $table->double('price');
-========
-            $table->string('title');
-            $table->text('content');
-            $table->double('price');
+            $table->string('image');
+            // $table->primary(['id', 'parent_id']);
             $table->timestamps();
->>>>>>>> nav:database/migrations/2023_02_07_124548_create_products_table.php
         });
     }
 
@@ -36,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('image_gallery');
     }
 };
