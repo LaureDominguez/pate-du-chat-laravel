@@ -1,10 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2>{{ __('Boutique') }}</h2>
+        <h1>{{ __('Nos produits') }}</h1>
     </x-slot>
 
     <x-slot name="main">
-        <h1>Nos articles</h1>
         @if (session('status'))
             <div class="alert alert-success">
                 {{session('status')}}
@@ -23,7 +22,7 @@
                 </article>
             @endforeach
             </div>
-        <a href="{{ route('shopping.form') }}" class="btn" >ajouter un produit</a>
+        <a href="{{ route('shopping.form') }}" class="btn" >Ajouter un produit</a>
     </x-slot>
 
 </x-app-layout>

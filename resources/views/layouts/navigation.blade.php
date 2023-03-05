@@ -15,13 +15,13 @@
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Accueil') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')">
+                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')">
                         {{ __('News') }}
                     </x-nav-link>
                     <x-nav-link :href="route('shop')" :active="request()->routeIs('shop')">
                         {{ __('Boutique') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')">
                         {{ __('Recettes') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">

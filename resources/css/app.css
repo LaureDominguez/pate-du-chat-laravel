@@ -125,6 +125,11 @@ section{
     -webkit-text-fill-color: transparent;
 }
 
+.admin{
+    border: solid 3px red;
+    color: red;
+}
+
 /******************* Carousel *******************/
 
 .album-rotator {
