@@ -12,22 +12,22 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')" class="aNav">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                         {{ __('Accueil') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')" class="aNav">
+                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')">
                         {{ __('News') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('shop')" :active="request()->routeIs('shop')" class="aNav">
+                    <x-nav-link :href="route('shop')" :active="request()->routeIs('shop')">
                         {{ __('Boutique') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')" class="aNav">
+                    <x-nav-link :href="route('gallery')" :active="request()->routeIs('gallery')">
                         {{ __('Recettes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="aNav">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Contact') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="aNav">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>

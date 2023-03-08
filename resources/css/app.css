@@ -4,8 +4,8 @@
 
 /******************* general *******************/
 :root{
-    --orange: #f29018;
-    --vert: #004f12;
+    --orange: rgb(242, 143, 24);
+    --vert: rgb(0, 79, 18);
 }
 
 body * {
@@ -227,8 +227,46 @@ section{
 }
 
 /******************* nav *******************/
-.aNav:active, .aNav:hover, .aNav:focus{
-    color: #fff;
+/* blade nav */
+/* \public\build\assets\app-9f0db517.css */
+
+.border-vert-400{
+    --tw-border-opacity: 1;
+    border-color:rgb(255 255 255 / var(--tw-border-opacity))
+}
+.text-vert-900{
+    --tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.border-vert-700{
+    --tw-border-opacity: 1;border-color:rgb(0 79 18 / var(--tw-border-opacity))
+}
+.focus\:border-vert-700:focus{
+    --tw-border-opacity: 1;border-color:rgb(0 79 18 / var(--tw-border-opacity))
+}
+.text-vert-700{
+    --tw-text-opacity: 1;color:rgb(255 255 0 / var(--tw-text-opacity))
+}
+.hover\:text-vert-700:hover{
+    --tw-text-opacity: 1;color:rgb(255 255 0 / var(--tw-text-opacity))
+}
+.focus\:text-vert-700:focus {
+    --tw-text-opacity: 1;color:rgb(255 255 0 / var(--tw-text-opacity))
+}
+
+.text-vert-500{
+    --tw-text-opacity: 1;color:rgb(0 79 18 / var(--tw-text-opacity))
+}
+
+.border-vert-300{
+    --tw-border-opacity: 1;border-color:rgb(255 255 0 / var(--tw-border-opacity))
+}
+.hover\:border-vert-300:hover{
+    --tw-border-opacity: 1;border-color:rgb(255 255 0 / var(--tw-border-opacity))
+}
+.focus\:border-vert-300:focus{
+    --tw-border-opacity: 1;
+    border-color:rgb(255 255 0 / var(--tw-border-opacity))
 }
 
 /******************* home *******************/
