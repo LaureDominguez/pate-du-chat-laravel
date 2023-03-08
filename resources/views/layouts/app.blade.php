@@ -25,6 +25,9 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header>
+                    {{-- <div>
+                        <x-application-logo class="block h-9 w-auto fill-current" />
+                </div> --}}
                     {{ $header }}
                 </header>
             @endif

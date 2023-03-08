@@ -6,7 +6,6 @@
 :root{
     --orange: #f29018;
     --vert: #004f12;
-    --bg: #FDF4E8;
 }
 
 body * {
@@ -16,11 +15,13 @@ body * {
 body {
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--bg);
+    background-color: var(--orange);
 }
 
 h1, h2, h3, h4, h5, nav, .btn {
     font-family: 'Pacifico', cursive;
+    color: var(--vert);
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -32,8 +33,7 @@ h1{
     font-size: 2.5rem;
     line-height: 8rem;
     margin-bottom: 3rem;
-    color: var(--orange);
-    text-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    /* text-shadow: 0 3px 20px rgba(255, 255, 255, 0.5); */
 }
 
 h2{
@@ -41,7 +41,6 @@ h2{
     line-height: 3rem;
     overflow: hidden;
     text-align: center;
-    color: var(--vert);
 }
 h2:before,
 h2:after {
@@ -67,7 +66,7 @@ a, a:active{
     color: inherit;
 }
 
-img{
+img:not(.logo){
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -93,6 +92,7 @@ section{
 
 .logo{
     height: 10rem;
+    margin: 2rem 2rem 0;
 }
 
 /* bouton */
@@ -108,7 +108,7 @@ section{
 .btn:hover, .btn:active{
     color: #fff;
     border: solid var(--orange) 1px ;
-    background-color: var(--orange);
+    background-color: var(--vert);
 }
 
 /* appercu de texte */
@@ -130,6 +130,25 @@ section{
     color: red;
 }
 
+/******************* Background *******************/
+
+/* .bg {
+    background-size: 200%;
+    background-image: linear-gradient(
+        45deg, 
+        var(--orange-2) 0%, 
+        var(--orange) 50%, 
+        var(--orange-3) 100%
+    );  
+    animation: AnimateBG 5s ease infinite;
+}
+
+@keyframes AnimateBG { 
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+} */
+
 /******************* Carousel *******************/
 
 .album-rotator {
@@ -150,7 +169,7 @@ section{
     z-index: 100;
     background: linear-gradient(
         90deg,
-        #FDF4E8 5%,
+        #f29018 5%,
         transparent 90%
     );
 }
@@ -165,7 +184,7 @@ section{
     z-index: 100;
     background: linear-gradient(
         270deg,
-        #FDF4E8 5%,
+        #f29018 5%,
         transparent 90%
     );
 }
@@ -208,7 +227,9 @@ section{
 }
 
 /******************* nav *******************/
-
+.aNav:active, .aNav:hover, .aNav:focus{
+    color: #fff;
+}
 
 /******************* home *******************/
 
