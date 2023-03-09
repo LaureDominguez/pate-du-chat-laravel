@@ -21,7 +21,7 @@
         </div>
         @endif
 
-        <form name="shopping.new" id="shopping-new" action="{{route('shopping.new')}}" method="POST">
+        <form name="shopping.new" id="shopping-new" action="{{route('shopping.new')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <label for="title">Titre</label>
             <input type="text" name="title" required>
@@ -30,7 +30,7 @@
             <input type="text" name="content" required>
 
             <label for="price">Prix</label>
-            <input type="number" name="price" required>
+            <input type="decimal" name="price" required>
 
             <label for="image">image</label>
             <input type="file" name="image">

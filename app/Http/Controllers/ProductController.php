@@ -48,14 +48,19 @@ class ProductController extends Controller
         $product->content = $request->content;
         $product->price = $request->price;
 
-        // if ($request->image) {
-        //     dd($request);
-        //     $request->validate([
-        //         'image' => 'mimes:png,jpg,jpeg'
-        //     ]);
-        //     $request->image->store('product', 'app', 'public');
-        //     $product->image = $request->file->hashName();
-        // }
+        if ($request->image) {
+            // dd($request);
+            $this->validate($request, [
+                'image' => 'image|mimes:png,jpg,jpeg,gif,svg|max:2048',
+            ]);
+            $input['image'] = time() . '.' . $request->image->getClientOriginalExtension();
+            $request->image->move(public_path('images'), $input['image']);
+            $product->image = $input['image'];
+            // dd($product);
+
+            // $input['title'] = $request->title;
+            // ImageGallery::create($input);
+        }
         $product->save();
         return redirect('shop')->with('status', 'Produit ajouté !');
     }

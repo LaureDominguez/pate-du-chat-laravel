@@ -12,7 +12,7 @@
         <div class="container-shop-view">
             @foreach ($products as $product)
                 <article class="acticle-view">
-                    <img src="{{$product->image}}" alt="">
+                    <img src="/images/{{$product->image}}" alt="">
                     <div>
                         <h5>{{$product->title}}</h5>
                         <p>{{$product->content}}</p>
