@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2>{{ __('Boutique') }}</h2>
+        <h1>{{ __('Nos produits') }}</h1>
     </x-slot>
 
 <<<<<<< HEAD
@@ -21,7 +21,6 @@
         <button class="btn" action="{{ route('shop.create') }}">Ajouter un produit</button>
 =======
     <x-slot name="main">
-        <h1>Nos articles</h1>
         @if (session('status'))
             <div class="alert alert-success">
                 {{session('status')}}
@@ -40,8 +39,12 @@
                 </article>
             @endforeach
             </div>
+<<<<<<< HEAD:resources/views/shop/shop.blade.php
         <a href="{{ route('shopping.form') }}" class="btn" >ajouter un produit</a>
 >>>>>>> nav
+=======
+        <a href="{{ route('shopping.form') }}" class="btn" >Ajouter un produit</a>
+>>>>>>> news:resources/views/shop/index.blade.php
     </x-slot>
 
 </x-app-layout>

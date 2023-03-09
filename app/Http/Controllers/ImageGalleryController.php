@@ -15,12 +15,6 @@ class ImageGalleryController extends Controller
         return view('image-gallery', compact('images'));
     }
 
-    // public function carousel()
-    // {
-    //     $images = ImageGallery::get();
-    //     return $images;
-    // }
-
     public function upload(Request $request)
     {
         $this->validate($request, [

@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('shop.shop', [
+        return view('shop.index', [
             'products' => Product::all()
         ]);
     }
@@ -37,7 +37,7 @@ class ProductController extends Controller
 =======
     public function create(Product $product)
     {
-        return view('shop.new', [
+        return view('shop.create', [
             'product' => $product
         ]);
 >>>>>>> nav
@@ -82,10 +82,14 @@ class ProductController extends Controller
     public function show(Product $product)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return view('shop.product', [
 =======
         return view('shop.view', [
 >>>>>>> nav
+=======
+        return view('shop.detail', [
+>>>>>>> news
             'product' => $product
         ]);
     }

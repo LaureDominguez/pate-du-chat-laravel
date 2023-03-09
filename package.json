@@ -16,7 +16,11 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+<<<<<<< HEAD
         "@popperjs/core": "^2.11.6",
         "bootstrap": "^5.2.3"
+=======
+        "@ckeditor/ckeditor5-build-classic": "^36.0.1"
+>>>>>>> news
     }
 }

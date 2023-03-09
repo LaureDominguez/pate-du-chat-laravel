@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActuController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,10 +19,17 @@ Route::get('/', function () {return view('home');})->name('home');
 // Route::get('news-carousel', [\App\Http\Controllers\Controller::class, 'newsCarousel']);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop.shop');
 Route::get('{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shop.product');
 Route::get('create', [\App\Http\Controllers\ProductController::class, 'create'])->name('shop.create');
 =======
+=======
+//News
+Route::get('news', [\App\Http\Controllers\ActuController::class, 'index'])->name('news');
+Route::post('news', [\App\Http\Controllers\ActuController::class, 'store'])->name('news.store');
+
+>>>>>>> news
 // Shop
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop');
 Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
