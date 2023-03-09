@@ -12,9 +12,9 @@
                 @foreach ($news as $actu)
                     <article class="news-view">
                         {{-- <img src="{{$product->image}}" alt=""> --}}
-                        <div>
+                        <div class="fancy">
                             {{-- <h5>{{$product->title}}</h5> --}}
-                            <p>{{$actu->message}}</p>
+                            {{$actu->message}}
                         </div>
                     </article>
                 @endforeach
@@ -39,6 +39,16 @@
                         .catch( error => {
                             console.error( error );
                         } );
+                    
+                    editor.conversion
+                        .for( 'downcast' )
+                        .elementToElement( {
+                            model: 'paragraphSeparator',
+                            view: {
+                                name: 'p',
+                                classes: 'fancy'
+                            }
+                    } );
                 </script>
 
             </section>
