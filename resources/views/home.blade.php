@@ -1,8 +1,4 @@
 <x-app-layout>
-    <x-slot name="head">
-        @vite(['resources/js/main.js'])
-    </x-slot>
-
     <x-slot name="header">
         <h1 class="titre">{{ __('Les Pâtes du chat ') }}</h1>
     </x-slot>
