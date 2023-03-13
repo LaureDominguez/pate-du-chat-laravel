@@ -42,20 +42,21 @@
 
         <div>
             @if ($images->count())
-            @foreach ($images as $image)
-                <div>
-                    <a href="/images/{{ $image->image }}">
-                        <img alt="{{ $image->title }}" src="/images/{{ $image->image }}" />
-                        <p>{{ $image->title }}</p>
-                    </a>
-                    <form action="{{ url('image-gallery',$image->id) }}" method="POST">
-                    <input type="hidden" name="_method" value="delete">
-                    {!! csrf_field() !!}
-                    <button type="submit" class="close-icon btn btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
-                    </form>
-                </div>
-            @endforeach
-                
+                @foreach ($images as $image)
+                    <div>
+                        {{-- <a href="/images/{{ $image->image }}"> --}}
+                            <figure class="article-view">
+                                <img alt="{{ $image->title }}" src="/images/{{ $image->image }}" class="image" />
+                                <figcaption>{{ $image->title }}</figcaption>
+                            </figure>
+                        {{-- </a> --}}
+                        <form action="{{ url('image-gallery',$image->id) }}" method="POST">
+                            <input type="hidden" name="_method" value="delete">
+                            {!! csrf_field() !!}
+                            <button type="submit" class="close-icon btn btn-danger">supprimer<i class="glyphicon glyphicon-remove"></i></button>
+                        </form>
+                    </div>
+                @endforeach
             @endif
         </div>
     </x-slot>

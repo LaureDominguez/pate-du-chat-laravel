@@ -27,6 +27,7 @@ Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->n
 Route::get('new-product', [\App\Http\Controllers\ProductController::class, 'create'])->name('shopping.form');
 Route::post('store-form', [\App\Http\Controllers\ProductController::class, 'store'])->name('shopping.new');
 Route::get('detail-{product}', [\App\Http\Controllers\ProductController::class, 'show'])->name('shopping.show');
+Route::delete('product/{id}', [\App\Http\Controllers\ProductController::class, 'destroy']);
 
 // Gallery
 Route::get('image-gallery', [\App\Http\Controllers\ImageGalleryController::class, 'index'])->name('gallery');

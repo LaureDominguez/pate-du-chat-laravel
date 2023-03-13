@@ -291,27 +291,47 @@ section{
 /******************* shop *******************/
 
 .shop-view{
-    padding: 1rem;
-}
-
-.container-shop-view{
-    padding: 1rem;
+    margin: 1rem 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, 12rem);
 }
+
 .acticle-view{
     height: 15rem;
     width: 10rem;
     overflow: hidden;
     border: solid 1px;
     display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 /* @media screen and (max-width: 700px) {    
     .large-screen{
         display: none;
     }
 } */
+
+
+/******************* Gallerie *******************/
+
+.image{
+    max-height: 500px;
+    max-width: 500px;
+    /* content: fit; */
+    border: solid 2px;
+}
+
+.article-view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-view figcaption{
+    background-color: #fff;
+    padding: 3rem;
+    height: 500px;
+}
