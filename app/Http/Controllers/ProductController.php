@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 use function GuzzleHttp\Promise\all;
 use function PHPUnit\Framework\isTrue;
@@ -62,7 +63,8 @@ class ProductController extends Controller
             // ImageGallery::create($input);
         }
         $product->save();
-        return redirect('shop')->with('status', 'Produit ajouté !');
+        return redirect('shop')
+            ->with('success', 'Produit ajouté !');
     }
 
     /**
@@ -109,8 +111,17 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::find($id)->delete();
+        // dd(Product::find($id)->image);
+
+        $product = Product::findOrFail($id);
+
+        if ($product->image) {
+            $image = $product->image;
+            $img_path = public_path("images/".$image);
+            File::delete($img_path);
+        }
+        $product->delete();
         return redirect('shop')
-            ->with('success', 'Produit correctement effacé.');
+            ->with('success', 'Produit supprimé !');
     }
 }

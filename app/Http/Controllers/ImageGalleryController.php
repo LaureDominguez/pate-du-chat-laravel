@@ -29,7 +29,7 @@ class ImageGalleryController extends Controller
         ImageGallery::create($input);
 
         return back()
-            ->with('success', 'Image correctement importé.');
+            ->with('success', 'Image correctement importée.');
     }
 
     public function destroy($id)

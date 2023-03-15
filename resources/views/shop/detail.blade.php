@@ -15,9 +15,7 @@
             <form action="{{url('product',$product->id)}}" method="POST">
                 <input type="hidden" name="_method" value="delete">
                 {!! csrf_field() !!}
-                <button type="submit" class="btn">
-                    supprimer
-                </button>
+                <button type="submit" class="btn">supprimer</button>
             </form>
         </div>
     </x-slot>

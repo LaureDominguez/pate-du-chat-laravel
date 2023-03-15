@@ -10,15 +10,9 @@
     <x-slot name="main">
         <div class="container">
             <div class="admin">
-                @if (session('status'))
-                    <div class="alert alert-success">
-                        {{session('status')}}
-                    </div>
-                @endif
                 @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-block">
-                        <button type="button" class="close" data-dismiss='alert'>x</button>
-                        <strong>{{$message}}</strong>
+                    <div class="alert alert-success">
+                        <p>{{$message}}</p>
                     </div>
                 @endif
                 <a href="{{ route('shopping.form') }}" class="btn" >Ajouter un produit</a>
@@ -27,12 +21,25 @@
             <section class="shop-view">
                 @foreach ($products as $product)
                     <article class="acticle-view">
-                        <img src="/images/{{$product->image}}" alt="">
+                        @if ($product->image )
+                            <p>ya une image</p>
+                            <img src="/images/{{$product->image}}" alt="">
+                            @else
+                            <p>ya pas d'image</p>
+                            <img src="/images/logo.pnggit add" alt="">
+                        @endif
                         <div>
                             <h5>{{$product->title}}</h5>
                             <p>{{$product->content}}</p>
                             <p>{{$product->price}}€</p>
                             <a href="{{route('shopping.show', $product->id)}}" class="btn">voir plus</a>
+                        </div>
+                        <div class="croix">
+                            <form action="{{url('product',$product->id)}}" method="POST">
+                                <input type="hidden" name="_method" value="delete">
+                                {!! csrf_field() !!}
+                                <button class="croix-btn" type="submit">x</button>
+                            </form>
                         </div>
                     </article>
                 @endforeach
