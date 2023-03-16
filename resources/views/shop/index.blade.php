@@ -10,38 +10,41 @@
     <x-slot name="main">
         <div class="container">
             <x-slot name="admin">
-                <div class="admin">
+                <section class="admin">
                     @if ($message = Session::get('success'))
                         <p>{{$message}}</p>
                     @endif
                     <a href="{{ route('shopping.form') }}" class="btn" >Ajouter un produit</a>
-                </div>
+                </section>
             </x-slot>
 
             <section class="shop-view">
                 @foreach ($products as $product)
-                    <article class="acticle-view">
-                        @if ($product->image )
-                            <img src="/images/{{$product->image}}" alt="">
-                            @else
-                            <img src="/images/logo.png" alt="">
-                        @endif
-                        
-                        <div>
-                            <h5>{{$product->title}}</h5>
-                            <p>{{$product->content}}</p>
-                            <p>{{$product->price}}€</p>
-                            <a href="{{route('shopping.show', $product->id)}}" class="btn">voir plus</a>
-                        </div>
+                    <figure class="shop-tuile">
+                        <a href="{{route('shopping.show', $product->id)}}">
+                            @if ($product->image)
+                                <img src="/images/{{$product->image}}" alt="">
+                                @else
+                                <img src="/images/logo.png" alt="">
+                            @endif
+                            <figcaption>
+                                <h5>{{$product->title}}</h5>
+                                <p>{{$product->content}}</p>
+                                <p>{{$product->price}}€</p>
+                                <p class="btn">Voir plus</p>
+                            </figcaption>
+                        </a>
 
-                        <div class="croix">
-                            <form action="{{url('product',$product->id)}}" method="POST">
-                                <input type="hidden" name="_method" value="delete">
-                                {!! csrf_field() !!}
-                                <button class="croix-btn" type="submit" onclick="return confirm('Voulez-vous continuer ?')">x</button>
-                            </form>
-                        </div>
-                    </article>
+                        @if (Auth::user() && Auth::user()->is_admin)
+                            <div class="croix">
+                                <form action="{{url('product',$product->id)}}" method="POST">
+                                    <input type="hidden" name="_method" value="delete">
+                                    {!! csrf_field() !!}
+                                    <button class="croix-btn" type="submit" onclick="return confirm('Voulez-vous continuer ?')">x</button>
+                                </form>
+                            </div>
+                        @endif
+                    </figure>
                 @endforeach
             </section>
         </div>
