@@ -21,6 +21,8 @@ Route::get('/', function () {return view('home');})->name('home');
 //News
 Route::get('news', [\App\Http\Controllers\ActuController::class, 'index'])->name('news');
 Route::post('news', [\App\Http\Controllers\ActuController::class, 'store'])->name('news.store');
+//Ckeditor
+Route::post('ckeditor/upload', 'CKEditorController@upload')->name('ckeditor.image-upload');
 
 // Shop
 Route::get('shop', [\App\Http\Controllers\ProductController::class, 'index'])->name('shop');
