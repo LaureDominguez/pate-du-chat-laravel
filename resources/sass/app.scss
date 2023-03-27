@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 /******************* general *******************/
 :root{

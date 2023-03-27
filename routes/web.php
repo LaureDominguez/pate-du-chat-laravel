@@ -36,6 +36,9 @@ Route::get('image-gallery', [\App\Http\Controllers\ImageGalleryController::class
 Route::post('image-gallery', [\App\Http\Controllers\ImageGalleryController:: class, 'upload']);
 Route::delete('image-gallery/{id}', [\App\Http\Controllers\ImageGalleryController:: class, 'destroy']);
 
+// Contact
+Route::get('contact',function () {return view('contact.contact');})->name('contact');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -47,3 +50,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

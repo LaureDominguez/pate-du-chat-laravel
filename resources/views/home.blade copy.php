@@ -1,22 +1,12 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h1 class="titre">{{ __('Les Pâtes du chat ') }}</h1>
+    </x-slot>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Les Pâtes du chat') }}</div>
+    <x-slot name="main">
+        <div class="container">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-                <section class="home">
+            <section class="home">
                 <figure>
                     <img src="/images/pasta-flour_I4MIIMHZ5M.jpg">
                     <figcaption>
@@ -171,8 +161,7 @@
                     
                 </table>
             </section>
-            </div>
         </div>
-    </div>
-</div>
-@endsection
+    </x-slot>
+
+</x-app-layout>

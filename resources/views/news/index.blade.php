@@ -8,18 +8,22 @@
 
     <x-slot name="main">
         <div class="container">
-            <section class="news">
-                @foreach ($news as $actu)
-                    <article class="news-view">
-                        {{-- <img src="{{$product->image}}" alt=""> --}}
-                            {{-- <h5>{{$product->title}}</h5> --}}
-                            {{$actu->message}}
-                    </article>
-                @endforeach
-            </section>
-
             <section class="admin">
                 <x-forms.ckeditor-editor/>
+            </section>
+
+            <section class="news">
+                @foreach ($news as $actu)
+                    <article class="editor">
+                            {!!$actu->message!!}
+                            <div class="timestamp">
+                                <p class="date">Créé le {{$actu->created_at->format('d/m/Y')}}</p>
+                                @if ($actu->created_at != $actu->updated_at)
+                                    <p class="date">Modifié le {{$actu->updated_at->format('d/m/Y')}}</p>
+                                @endif
+                            </div>
+                    </article>
+                @endforeach
             </section>
         </div>
     </x-slot>
