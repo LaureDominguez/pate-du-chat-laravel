@@ -17,15 +17,18 @@
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
-    @if (isset($head))
+    {{-- @if (isset($head))
         {{ $head }}
-    @endif
+    @endif --}}
 </head>
 <body>
     <div id="app">
             @include('layouts.navigation')
 
         <main class="py-4">
+            @if (isset($admin) && Auth::user() && Auth::user()->is_admin)
+                @yield('admin')
+            @endif
             @yield('content')
         </main>
     </div>

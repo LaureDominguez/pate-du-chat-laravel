@@ -1,14 +1,17 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2>{{ __('Nouveau produit') }}</h2>
-    </x-slot>
+@extends('layout.app')
 
-    <x-slot name="main">
-        @if (session('status'))
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Nouveau produit') }}</div>
+
+        {{-- @if (session('status'))
             <div>
                 {{session('status')}}
             </div>
-        @endif
+        @endif --}}
 
         <!-- if validation in the controller fails, show the errors -->
         @if ($errors->any())
@@ -37,6 +40,6 @@
 
             <button type="submit" class="btn">créer</button>
         </form>
-    </x-slot>
 
-</x-app-layout>
+            </div></div></div></div>
+            @endsection

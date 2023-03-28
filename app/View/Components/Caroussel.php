@@ -1,10 +1,10 @@
 <?php
 
-namespace App\View\Components\Forms;
+namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class tinymceConfig extends Component
+class Caroussel extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class tinymceConfig extends Component
      */
     public function render()
     {
-        return view('components.forms.tinymce-config');
+        return view('components.caroussel');
     }
 }
