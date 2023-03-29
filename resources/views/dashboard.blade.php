@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('Vous êtes connecté !') }}
+                    @section('admin')
+                        <h5>ADMIN</h5>
+                    @endsection
                 </div>
 
 
